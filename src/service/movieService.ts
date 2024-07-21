@@ -19,8 +19,7 @@ export const fetchMovies = async (): Promise<Movie[]> => {
         throw error; // Lide com o erro conforme necessário
     }
 };
-// src/services/cartService.ts
-// Exemplo de definição do tipo CartItem
+
 export interface CartItem {
   id: number;
   title: string;
