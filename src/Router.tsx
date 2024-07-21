@@ -11,7 +11,7 @@ export const Router = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
-                {/* <Route path="/card" element={<Home />} /> */}
+                <Route path="/card" element={<Home />} />
                 <Route path="/shoppingCart" element={<ShoppingCart/>} />
                 {/* Adicione a rota para MovieCard se necessário */}
                 {/* <Route path="/movie/:id" element={<MovieCard />} /> */}
