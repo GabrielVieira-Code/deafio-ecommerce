@@ -12,7 +12,7 @@ export const Router = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/card" element={<Home />} />
-                <Route path="/shoppingCart" element={<ShoppingCart/>} />
+                <Route path="/deafio-ecommerce/shoppingCart" element={<ShoppingCart/>} />
                 {/* Adicione a rota para MovieCard se necessário */}
                 {/* <Route path="/movie/:id" element={<MovieCard />} /> */}
             </Routes>
