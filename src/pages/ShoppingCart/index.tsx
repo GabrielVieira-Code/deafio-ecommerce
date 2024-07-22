@@ -27,6 +27,11 @@ export const ShoppingCart: React.FC = () => {
     setQuantity(value);
   };
 
+  const handleDeleteItem = (id: number) => {
+    const updatedCartItems = cartItems.filter(item => item.id !== id);
+    setCartItems(updatedCartItems);
+  };
+
   return (
     <C.Container>
       <C.Nav>
@@ -43,7 +48,7 @@ export const ShoppingCart: React.FC = () => {
               <C.MovieTitle>{item.title}</C.MovieTitle>
               <C.QuantityInputContainer>
                 <C.Button onClick={decreaseQuantity}>-</C.Button>
-                <C.QuantityInput type="number" value={quantity} onChange={handleQuantityChange} />
+                <C.QuantityInput value={quantity} onChange={handleQuantityChange} />
                 <C.Button onClick={increaseQuantity}>+</C.Button>
               </C.QuantityInputContainer>
               <C.PriceContainer>
@@ -51,7 +56,7 @@ export const ShoppingCart: React.FC = () => {
               </C.PriceContainer>
               <C.Subtotal>R$ {(item.price * quantity).toFixed(2)}</C.Subtotal>
               <div style={{ fontSize: '24px', marginLeft: '-10px' }}>
-                <C.TrashIcon/>
+                <C.TrashIcon onClick={() => handleDeleteItem(item.id)} />
               </div>
             </C.Header>
           </C.Card>
